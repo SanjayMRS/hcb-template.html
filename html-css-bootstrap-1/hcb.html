@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="charset utf-8">
+        <meta name="viewport" content="width:device-width,initial-scale=1.0">
+        <title>hcb template...</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .body{
+                margin:0px;
+            }
+            .img{
+                max-width:100%;
+            }
+            .col-12{
+                background-image: url(https://wallpaperheart.com/wp-content/uploads/2018/04/nature-wallpapers-desktop-best-nature-wallpaper.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .logodesign {
+                width:40%;
+            }
+            .logobtn{
+                font-size: xx-large;
+            }
+            .col-6{
+                display: flex;
+                flex-wrap: nowrap;  
+            }
+            .col-6 > div{
+                width: 14.287em;
+                height:60px;
+                margin-left:8px;
+            }
+            .teambtn, .aboutbtn, .blogbtn, .servicesbtn{
+                color: azure;
+                width:100px;
+            }
+            .contactbtn{
+                width:120px;
+                color: azure;
+            }
+            .image-caption-head1{
+                font-weight:900;
+            }
+            .clean{
+                width:150px;
+            }
+            .caption{
+                margin-top:100px;
+            }
+            .progress-col{
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .progress-col > div{
+                width:33.33333333%;
+                height:30px;
+            }
+            .project-h3, .about{
+                font-weight:600;
+                font-size:xx-large;
+            }
+            .col-image-child{
+                display: flex;
+                flex-wrap: nowrap;
+                background-color: aqua;
+            }
+            .col-image-child > div{
+                width:50%;
+                height:300px;
+            }
+            .projectcol1{
+                background-image:url(https://www.wallpapers13.com/wp-content/uploads/2016/01/Sunset-Background-Images-Hd-Sunset-background-images-hd-07329.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .projectcol2{
+                background-image:url(https://wallpapercave.com/wp/wcmwqLH.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .carousel-item {
+                height:550px;
+            }
+            .carousel-caption{
+                margin-bottom:100px;
+            }
+            .image{
+                margin-left:355px;
+                background-image:url(https://dhydixdicta.files.wordpress.com/2013/10/background-images-wallpaper-free-download.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius:100%;
+                border:2px solid white;
+            }
+            .image2{
+                margin-left:355px;
+                background-image:url(https://s1.picswalls.com/wallpapers/2017/12/11/free-nature-wallpaper_123026118_313.jpeg);
+                background-position: center;
+                background-size:cover ;
+                background-repeat: no-repeat;
+                border-radius:100%;
+                border:1px solid black;
+            }
+            .image3{
+                margin-left:355px;
+                background-image:url(https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-HD-Cool-Nature-Background-Pictures.jpg);
+                background-position: center;
+                background-size:cover ;
+                background-repeat: no-repeat;
+                border-radius:100%;
+                border:2px solid white;
+            }
+            .img-fluid{
+                width:100%;
+                height:100%;
+            }
+            .carousel-indicators [data-bs-target]{
+                width:15px;
+                height:15px;
+                border-radius:50%;
+                border:2px white solid;
+                background-color:black;
+            }
+            .servicecol{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                column-gap:13px;
+            }
+            .servicecol > div{
+                width:33.333333333%;
+                margin-top:40px;
+                height:250px;
+            }
+            .latestcol{
+                display: flex;
+                flex-wrap: nowrap;
+                column-gap:50px;
+            }
+            .latestcol > div{
+                width:33.3333333%;
+                height:550px;
+                background-color: azure;
+            }
+            .latestchild12, .latestchild22, .latestchild32{
+                height:55%;
+            }
+            .latestchild22{
+                height:330px;
+            }
+            .latestchild11{
+                background-image:url(https://www.pixelstalk.net/wp-content/uploads/2016/04/landscape-wallpaper-hd-backgrounds.jpg);
+                background-position: center;
+                background-size:cover;
+                background-repeat: no-repeat;
+                 height:45%;
+            }
+            .latestchild21{
+                background-image:url(https://www.pixelstalk.net/wp-content/uploads/2016/06/Desktop-fall-backgrounds-images-download.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height:45%;
+            }
+            .latestchild31{
+                background-image:url(http://3.bp.blogspot.com/-Cajv-HcHhQc/URFeu-ufp0I/AAAAAAAASig/yGJKbEu2_Zc/s1600/Palm+Trees+Wallpapers+06.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height:45%;
+            }
+            .teamcol{
+                display: flex;
+                flex-wrap: nowrap;
+                margin-top:80px;
+            }
+            .teamcol > div{
+                width:25%;
+               height:200px;
+            }
+            .teamcol1{
+                background-image:url(https://wallpapercave.com/wp/wp8781444.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius:100%;
+            }
+            .teamcol2{
+                background-image:url(https://wallpapercave.com/wp/wp1981940.jpg);
+                background-position:center ;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius:100%;
+            }
+            .teamcol3{
+                background-image:url(https://2.bp.blogspot.com/-9vG3YPy4R58/Uasvio4KdxI/AAAAAAAAINQ/Icq7OqonITU/s1600/mens+images.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius:100%;
+            }
+            .contcol{
+                display: flex;
+                flex-wrap: nowrap;
+                margin-top:85px;
+            }
+            .contcol > div{
+                width:33.33333333%;
+                height:85px;
+            }
+            .contchild1, .contchild2{
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .contchild1 > div, .contchild2 > div{
+                width:50%;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="container-fluid">
+          <div class="row ">
+        <div class="col-12" style="height:600px;">
+            <div class="row">
+           <div class="col-6 logodesign pt-2"><button type="button" class="btn btn-lg logobtn btn-outline-light  border border-0">LOGO DESIGN</button></h3></div>
+           <div class="col-6 pt-5 text-white">
+            <div><button type="button" class="btn aboutbtn btn-outline-light  border border-0">About</button></div>
+            <div><button type="button" class="btn portfoliobtn btn-outline-light  border border-0">Portfolio</button></div>
+            <div><button type="button" class="btn testimoniolsbtn btn-outline-light  border border-0">Testimoniols</button></div>
+            <div><button type="button" class="btn servicesbtn btn-outline-light  border border-0">Services</button></div>
+            <div><button type="button" class="btn blogbtn btn-outline-light  border border-0">Blog</button></div>
+            <div><button type="button" class="btn teambtn btn-outline-light  border border-0">Our Team</button></div>
+            <div><button type="button" class="btn contactbtn btn-outline-light border border-0">Contact Us</button></div>
+           </div>
+        </div>
+        <div class="caption text-center text-white">
+            <div class="image-caption">
+                <h1 class="image-caption-head1">Clean<span style="color:yellow;">.</span>slick<span style="color:yellow;">.</span>Pixel Perfect</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor and it most popular Lorem ipsum <br>dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor and it most popular..</p>
+                    <div class="d-grid gap-4 d-md-flex justify-content-md-center">
+                <button class="btn text-white clean btn-outline-secondary border border-white border-3 rounded-0">Learn more</button>
+                <button class="btn text-white clean btn-warning rounded-0">Download</button>
+            </div>
+            </div>
+        </div>
+         </div>
+           </div>
+       </div>
+       <div class="container-fluid text-center">
+          <div class="col bg-light" style="height:240px;">
+            <h2 class="about pt-4">About</h2>
+            <p class="aboutpara pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit,
+                sed do eiusmod tempor and it most popular.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor and it<br> most popular Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor and it most popular..</p>
+           </div>
+       </div>
+       <div class="container-fluid bg-light">
+                        <div class="progress-col " style="height:100px;">
+                            <div>
+                                <div class="progrees bg-warning" style="width:90%;">
+                                    <div class="progress-bar progress-bar-stripped bg-danger text-black" style="width:66%;">66%
+                                     </div>
+                                </div><span style="color:red;"><strong>A Typography</strong></span>
+                            </div>
+                        <div>
+                        <div class="progrees bg-danger" style="width:90%;">
+                                <div>
+                                    <div class="progress-bar progress-bar-stripped bg-warning text-black" style="width:82%;">82%
+                                    </div>
+                                    </div>
+                                </div><span style="color:yellow;"><strong>Design</strong></span>
+                        </div>
+                        <div>
+                            <div class="progrees bg-info" style="width:90%;">
+                              <div>
+                                <div class="progress-bar progress-bar-stripped bg-success text-black" style="width:86%;">86%</div>
+                                </div>
+                              </div><span style="color:green;"><strong>Development</strong></span>
+                             </div>
+                        </div>
+         </div>
+         <div class="container-fluid bg-light">
+            <div class="project-col text-center" style="height:467px;">
+                <h3 class="project-h3 pt-5">Project</h3>
+                <p>You'll love our work,check it.</p>
+                <div class="col-image-child mt-5">
+                    <div class="bg-primary projectcol1"></div>
+                    <div class="bg-secondary projectcol2"></div>
+                </div>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="row">
+            <div id="carouselslide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+                <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="carousel-caption">
+                                    <h1>Testimoniols</h1>
+                                    <div class="carousel-image pt-4">
+                                        <div class="image bg-primary" style="width:20%;height:105px;"></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col1">
+                                            <p class="Testimoniolspara mt-3  bg-secondary border border-warning h-100 mt-3 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                sed do eiusmod tempor and it most popular.Lorem ipsum dolor sit amet, consectetur most </p>
+                                        </div>
+                                    </div>
+                                    <h2 class="milk mt-5">Milk Miller</h2>
+                                </div>
+                                <img src="https://dhydixdicta.files.wordpress.com/2013/10/background-images-wallpaper-free-download.jpg" class="img-fluid">
+                            </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h1 class=" text-black">Testimoniols</h1>
+                            <div class="carousel-image pt-4">
+                                <div class="image2 bg-primary" style="width:20%;height:105px;"></div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col1">
+                                    <p class="Testimoniolspara mt-3  bg-secondary  border border-dark  h-100 mt-3 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor and it most popular.Lorem ipsum dolor sit amet, consectetur most </p>
+                                </div>
+                            </div>
+                            <h2 class="milk mt-5 text-black">David Mallan</h2>
+                        </div>
+                        <img src="https://s1.picswalls.com/wallpapers/2017/12/11/free-nature-wallpaper_123026118_313.jpeg" class="img-fluid">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h1>Testimoniols</h1>
+                            <div class="carousel-image pt-4">
+                                <div class="image3 bg-primary" style="width:20%;height:105px;"></div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col1">
+                                    <p class="Testimoniolspara mt-3  bg-secondary  border border-warning  h-100 mt-3 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor and it most popular.Lorem ipsum dolor sit amet, consectetur most </p>
+                                </div>
+                            </div>
+                            <h2 class="milk mt-5">David Miller</h2>
+                        </div>
+                        <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-HD-Cool-Nature-Background-Pictures.jpg" class="img-fluid">
+                    </div>
+                </div>
+               <a href="#carouselslide" class="carousel-control-prev" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+               </a>
+               <a href="#carouselslide" class="carousel-control-next" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+               </a>
+               <div class="carousel-indicators">
+                 <button class="active" type="button" data-bs-target="#carouselslide" data-bs-slide-to="0" aria-expanded="true"></button>
+                 <button type="buttton" data-bs-target="#carouelslide" data-bs-slide-to="1"></button>
+                 <button type="buttton" data-bs-target="#carouelslide" data-bs-slide-to="1"></button>
+               </div>
+            </div>
+        </div>
+        </div>
+         
+        <div class="container-fluid">
+                <div class="row bg-light"> 
+               <div class="col text-center " style="height:450px;">
+                <h2 class="servicesh mt-5">services</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.</p>
+                    <div class="servicecol">
+                        <div class="">
+                            <h3 class="pt-3 text-danger">Web Design</h3>
+                            <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="">
+                            <h3 class="pt-3 text-warning">WEB DEVELOPMENT</h3>
+                            <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="">
+                            <h3 class="pt-3 text-success">SEO Analisys</h3>
+                            <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row bg-dark">
+                <div class="col text-center pt-3" style="height:900px;">
+                    <h2 class="text-light">Latest News</h2>
+                    <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.</p>
+                    <button class="btn btn-warning text-white mt-5 border border-warning rounded-0" type="button" >see blog - ></button>
+                    <div class="latestcol justify-content-center mt-5">
+                        <div  class="lateschild1">
+                            <div class="latestchild11"></div>
+                            <div class="latestchild12 text-start ">
+                                <h3 class="pt-5 ps-5">we have made this <br>theme as friendly</h3>
+                                <p class="ps-5 pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.</p>
+                                <button type="button" class="btn ms-4 text-warning">-> Read more</button>
+                            </div>
+                        </div>
+                        <div class="lateschild2" style="height:600px;">
+                            <div class="latestchild21 bg-primary"></div>
+                            <div class="latestchild22 text-start">
+                                <h3 class="pt-5 ps-5">stunning one page<br>wordpress theme for masses</h3>
+                                <p class="ps-5 pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.</p>
+                                <button type="button" class="btn ms-4 text-warning">-> Read more</button>
+                            </div>
+                        </div>
+                        <div  class="lateschild3">
+                            <div class="latestchild31 bg-primary"></div>
+                            <div class="latestchild32 text-start">
+                                <h3 class="pt-5 ps-5">Hello World!</h3>
+                                <p class="ps-5 pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor and it most popular Lorem ipsum dolor sit amet.</p>
+                                <button type="button" class="btn ms-4 text-warning">-> Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row bg-warning text-center text-white">
+                <div class="col-4 pt-4 border border-light border-bottom-0 border-top-0" style="height:130px;">
+                  <h2 style="font-weight:600;font-size: xxx-large;">14</h2>
+                  <h7 style="font-weight:900;">PROJECTS</h7>
+                </div>
+                <div class="col-4 pt-4 border border-light border-bottom-0 border-top-0" style="height:130px;">
+                  <h2 style="font-weight:600;font-size: xxx-large;">7</h2>
+                  <h7 style="font-weight:900;">CLIENTS</h7>                
+                </div>
+                <div class="col-4 pt-4" style="height:130px;">
+                <h2 style="font-weight:600;font-size: xxx-large;">14</h2>
+                <h7 style="font-weight:900;">COFFES</h7>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col text-center">
+                    <h2 class="mt-5"style="font-weight:600;">Team</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor and it most popular.</p>
+                    <div class="teamcol">
+                        <div class="teamcol1" style="width:20%;height:150px;"></div>
+                        <div class="text-start">
+                            <h4 class=" ps-4" style="font-weight:600;font-size: x-large;">Mark Lawrence</h4>
+                            <h7  class="ps-4 text-danger">Web Designer</h7>
+                            <p  class="ps-4 mt-4">Creative,detial-oriented<br>always focused.</p>
+                        </div>
+                        <div class="teamcol2"style="width:20%;height:150px;"></div>
+                        <div class=" text-start">
+                            <h4 class="ps-4"style="font-weight:600;font-size: x-large;">Jone Stenton</h4>
+                            <h7  class="ps-4 text-warning">SEO Specialist</h7>
+                            <p  class="ps-4 mt-4">Curious,geech and get <br>serious and when it comes to work.</p>
+                        </div>
+                        <div class="teamcol3"style="width:20%;height:150px;"></div>
+                        <div class=" text-start">
+                            <h4 class="ps-4"style="font-weight:600;font-size: x-large;">John Smith</h4>
+                            <h7  class="ps-4 text-voilet">Developerr</h7>
+                            <p  class="ps-4 mt-4">Enthusiastic,passionate with<br> great sense of humor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="mt-5">Contacts</h2>
+                    <div class="contcol">
+                        <div class="contchild1">
+                            <div  class="contchild11 border border-dark border-bottom-0 border-top-0 border-start-0" style="width:25%;">
+                                <h4 class="text-start">Address</h4>
+                            </div>
+                            <div  class="contchild12" style="width:75%;">
+                                <p class="text-start ps-3">Street 221B Baker Street,<br>London,Uk</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="contchild2">
+                                <div class="contchild21 border border-dark border-bottom-0 border-start-0 border-top-0">
+                                    <h4 class="text-start">Customer support</h4>
+                                </div>
+                                <div class="contchild22">
+                                    <p class="text-start ps-3">Email<br>(email protected)<br>
+                                    Phone:(555)-555-5555 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="contchild2">
+                                <div class="contchild21 border border-dark border-bottom-0 border-start-0 border-top-0">
+                                    <h4 class="text-end pe-4">Social media</h4>
+                                </div>
+                                <div class="contchild22 text-start">
+                                   <a href="#" class="ps-3 text-success" style="text-decoration: none;">facebook</a>
+                                   <a href="#" class="ps-3 text-success" style="text-decoration: none;">insta</a><br>
+                                   <a href="#" class="ps-3 text-success" style="text-decoration: none;">twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row ">
+               <div class="col-4 mt-5" >
+                 <label for="exampleformcontrolinput1" class="form-label">Your Name(required)</label>
+                 <input type="email" class="form-control border border-dark rounded-0" placeholder="Smith">
+                </div>
+               <div class="col-4 mt-5">
+               <label for="forexampleformcontrolinput2" class="form-label">Email</label>
+                 <input type="email" class="form-control border border-dark rounded-0" placeholder="123@gmail.com"> 
+               </div>
+               <div class="col-4 mt-5">
+                <label for="forexampleformcontrolinput3" class="form-label">Subject</label>
+                <input type="email" class="form-control border border-dark rounded-0" placeholder="tamil,maths,etc...">
+               </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div>
+                    <label for="forexampleformcontroltextarea" class="form-label">Your Message</label>
+                   <textarea class="form-control border border-dark rounded-0" rows="9"></textarea>
+                   <div class="text-end mt-5 mb-4">
+                   <button type="button" class="btn btn-warning text-light">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row bg-dark">
+                <div class="col-3 mt-5 me-5 mb-5">
+                    <h5 class="text-light">PRODUCTS</h5>
+                    <div class="btn-group dropend" style="width:60%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light"  style="width: 50%;">Our work</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-center text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="btn-group dropend" style="width:60%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light" style="width: 50%;">Club</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-center text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="btn-group dropend" style="width:60%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light"  style="width: 50%;">News</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-center text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="btn-group dropend" style="width:60%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light"  style="width:68%;">Announcement</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-start text-light" data-bs-toggle="dropdown" style="width:32%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-3  mt-5">
+                    <h5 class="text-light">INFORMATION</h5>
+                    <div class="btn-group dropend" style="width:60%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light" style="width: 50%;">Pricing</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-center text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="btn-group dropend" style="width:60%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light" style="width: 50%;">Terms</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-center text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="btn-group dropend" style="width:60%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light" style="width: 50%;">Affiliates</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-center text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="btn-group dropend" style="width:60%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light" style="width:68%;">Blog</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-start text-light pb-5" data-bs-toggle="dropdown" style="width:32%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-3  mt-5">
+                    <h5 class="text-light">SUPPORT</h5>
+                    <div class="btn-group dropend" style="width:80%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light" style="width: 50%;">Documentation</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-start text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="btn-group dropend" style="width:80%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light" style="width: 50%;">FAQs</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-start text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="btn-group dropend" style="width:80%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light" style="width: 50%;">Forums</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-start text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="btn-group dropend" style="width:80%;height:30px;">
+                        <button type="button" class="btn btn-outline border border-dark text-start text-light" style="width: 50%;">Contacts</button>
+                        <button type="button" class="btn btn-outline dropdown-toggle dropdown-toggle-split border border-dark text-start text-light" data-bs-toggle="dropdown" style="width:50%;">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                                <li><a href="#" class="dropdown-item">action</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div><br><br>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
